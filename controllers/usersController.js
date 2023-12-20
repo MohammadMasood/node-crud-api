@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 const users = [];
 
 const getAllUsers = (req, res) => {
@@ -5,5 +6,5 @@ const getAllUsers = (req, res) => {
 }
 
 module.exports = {
-    getAllUsers
+    getAllUsers,
 }
