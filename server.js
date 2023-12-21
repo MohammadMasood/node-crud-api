@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+app.use(bodyParser.json());
+
 // Routes for users module
 app.use('/api/users', userRoutes);
 
@@ -18,6 +20,9 @@ app.use((req, res) => {
 });
 
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
+module.exports = {app, server};
