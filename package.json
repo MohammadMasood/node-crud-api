@@ -7,6 +7,7 @@
     "start:dev": "nodemon server.js",
     "build": "webpack",
     "start:prod": "node dist/bundle.js",
+    "start:multi": "node server.js",
     "test": "mocha tests/**/*.test.js"
   },
   "repository": {
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/MohammadMasood/node-crud-api#readme",
   "dependencies": {
+    "cluster": "^0.7.7",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "uuid": "^9.0.1"
